@@ -726,7 +726,7 @@
     /* _______________#storeIntro_________ */
     
     #storeIntro {
-        background-color: rgba(0, 0, 0, .06);
+        background-color: rgba(0, 0, 0, .09);
     }
     
     #storeIntro a {
@@ -777,7 +777,7 @@
     }
     
     .intro-overlay-1 {
-        background-color: #f9fac9;
+        background-color: rgb(246, 248, 185);
     }
     
     .intro-overlay-2 {
@@ -789,7 +789,7 @@
     }
     
     .intro-overlay-4 {
-        background-color: rgb(230, 230, 247);
+        background-color: rgb(223, 223, 248);
     }
     
     .intro-img {
@@ -845,7 +845,7 @@
     /* _______________#partner_________ */
     
     #partner {
-        background-color: rgba(0, 0, 0, .06);
+        background-color: rgba(0, 0, 0, .09);
     }
     
     #partner a {
