@@ -64,38 +64,31 @@
     .card-box:hover .card-front {
         transform: rotateY(0);
     }
-}
-
-#detail .container {
-    box-shadow: none;
-}
-
-#detail #slider .carousel-item img {
-    height: 300px;
-}
-
-#noti {
-    max-width: 100%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 0;
-}
-
-#noti .noti-tittle {
-    border-radius: 0;
-}
-
-#noti .noti-form {
-    margin-top: 10%;
-}
-
-#noti .noti-tittle span i {
-    display: block;
-}
-
-.detail-menu-qc img {
-    height: auto;
+    #detail .container {
+        box-shadow: none;
+    }
+    #detail #slider .carousel-item img {
+        height: 300px;
+    }
+    #noti {
+        max-width: 100%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 0;
+    }
+    #noti .noti-tittle {
+        border-radius: 0;
+    }
+    #noti .noti-form {
+        margin-top: 10%;
+    }
+    #noti .noti-tittle span i {
+        display: block;
+    }
+    .detail-menu-qc img {
+        height: auto;
+    }
 }
 
 
