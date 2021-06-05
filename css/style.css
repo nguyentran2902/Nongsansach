@@ -31,6 +31,19 @@
         font-style: italic;
     }
     
+     ::-webkit-scrollbar {
+        width: 12px;
+    }
+    
+     ::-webkit-scrollbar-thumb {
+        background: linear-gradient(transparent, var(--bg-color));
+        border-radius: 6px;
+    }
+    
+     ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(transparent, var(--btn-hover-color));
+    }
+    
     @keyframes loadText {
         0% {
             opacity: 0;
@@ -748,24 +761,17 @@
         height: 80%;
         top: 0;
         left: 0;
-        -o-webkit-clip-path: ellipse(82% 82% at 50% 20%);
-        -o-moz-clip-path: ellipse(82% 82% at 50% 20%);
         clip-path: ellipse(82% 82% at 50% 20%);
-        will-change: clip-path;
         transition: all 0.3s linear;
     }
     
     .intro-outside:hover .intro-overlay-1,
     .intro-outside:hover .intro-overlay-3 {
-        -o-webkit-clip-path: ellipse(82% 82% at 64% 20%);
-        -o-moz-clip-path: ellipse(82% 82% at 64% 20%);
         clip-path: ellipse(82% 82% at 64% 20%);
     }
     
     .intro-outside:hover .intro-overlay-2,
     .intro-outside:hover .intro-overlay-4 {
-        -o-webkit-clip-path: ellipse(82% 82% at 36% 20%);
-        -o-moz-clip-path: ellipse(82% 82% at 36% 20%);
         clip-path: ellipse(82% 82% at 36% 20%);
     }
     
