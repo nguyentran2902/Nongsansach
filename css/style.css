@@ -245,7 +245,7 @@
     }
     
     .modal-footer .twitter {
-        background-image: url(../img/twitter.jpg);
+        background-image: url(../img/Twitter.jpg);
     }
     
     .modal-footer .social {
@@ -394,9 +394,6 @@
         font-size: 14px;
     }
     /* ____________mobile-menu_______ */
-    /* .offcanvas {
-    z-index: 332;
-} */
     
     .offcanvas .offcanvas-title {
         font-family: 'Lobster', cursive;
