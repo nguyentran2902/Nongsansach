@@ -162,7 +162,7 @@
         border-radius: 50%;
         font-weight: 500;
     }
-    /* ______________modal_______________ */
+    /* ______________#modal_______________ */
     
     .modal {
         background: url(../img/cover-10.jpeg) no-repeat 0px 0px;
@@ -751,19 +751,24 @@
         height: 80%;
         top: 0;
         left: 0;
+        -o-webkit-clip-path: ellipse(82% 82% at 50% 20%);
+        -o-moz-clip-path: ellipse(82% 82% at 50% 20%);
         clip-path: ellipse(82% 82% at 50% 20%);
-        -webkit-clip-path: ellipse(82% 82% at 50% 20%);
         will-change: clip-path;
         transition: all 0.3s linear;
     }
     
     .intro-outside:hover .intro-overlay-1,
     .intro-outside:hover .intro-overlay-3 {
+        -o-webkit-clip-path: ellipse(82% 82% at 64% 20%);
+        -o-moz-clip-path: ellipse(82% 82% at 64% 20%);
         clip-path: ellipse(82% 82% at 64% 20%);
     }
     
     .intro-outside:hover .intro-overlay-2,
     .intro-outside:hover .intro-overlay-4 {
+        -o-webkit-clip-path: ellipse(82% 82% at 36% 20%);
+        -o-moz-clip-path: ellipse(82% 82% at 36% 20%);
         clip-path: ellipse(82% 82% at 36% 20%);
     }
     

@@ -125,21 +125,3 @@ window.onscroll = function() {
         cuonLen = cuonXuong;
     }
 };
-
-
-
-// ___________offcanvas - toggle_______________
-
-$(document).ready(function() {
-    $(".log-active").click(function() {
-
-
-        $(".offcanvas").removeClass("show");
-        // $(".modal-backdrop").addClass("fade");
-        // $(".modal-backdrop").removeClass("show");
-
-
-
-
-    });
-});
