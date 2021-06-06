@@ -394,7 +394,6 @@
     .modal-content {
         background: rgba(255, 255, 255, 0.17);
         box-shadow: 0 6px 43px 0 rgb(0, 0, 0, .4);
-        text-shadow: 3px 3px 4px rgba(0, 0, 0, .6);
         z-index: 1222;
         border-radius: 16px;
     }
