@@ -79,9 +79,6 @@ window.onscroll = function() {
         $(".header-nav").css("padding", "0 16px");
         $(".header-nav").css("transition", "none");
 
-
-
-
         $(".nav-menu").css("position", "relative");
         $(".nav-menu").css("top", "0");
         $(".nav-menu").css("transition", "none");
@@ -96,11 +93,9 @@ window.onscroll = function() {
             $(".header-nav").css("left", "0");
             $(".header-nav").css("right", "0");
             $(".header-nav").css("padding", "0 28px");
-            $(".header-nav").css("background-color", "rgba(255,255,255,.96)");
+            $(".header-nav").css("background-color", "#fdfce3");
             $(".header-nav").css("opacity", "1");
             $(".header-nav").css("transition", "all 0.5s linear");
-
-
 
             $(".nav-menu").css("position", "fixed");
             $(".nav-menu").css("top", "79px");
@@ -118,8 +113,6 @@ window.onscroll = function() {
 
             $(".nav-menu").css("top", "-140px");
             $(".nav-menu").css("opacity", "0");
-
-
 
         }
         cuonLen = cuonXuong;

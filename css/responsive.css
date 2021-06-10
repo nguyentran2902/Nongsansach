@@ -13,6 +13,12 @@
     #detail .detail-infor {
         padding-left: 30px;
     }
+    .contact-box {
+        margin-left: 24px;
+    }
+    #detail iframe {
+        height: 500px;
+    }
 }
 
 
@@ -40,12 +46,18 @@
     .detail-menu-qc-tablet {
         display: block;
     }
+    #detail iframe {
+        height: 400px;
+    }
 }
 
 
 /* __________________Mobile__________ */
 
 @media (min-width: 576px) and (max-width: 767px) {
+    .header-nav .navbar-brand img {
+        height: 52px;
+    }
     #slider .carousel-item img {
         height: 400px;
     }
@@ -95,6 +107,9 @@
 /* ________________Small-Mobile___________ */
 
 @media (max-width: 575px) {
+    .header-nav .navbar-brand img {
+        height: 52px;
+    }
     .navbar-search {
         margin-bottom: 16px;
     }
