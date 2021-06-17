@@ -118,3 +118,84 @@ window.onscroll = function() {
         cuonLen = cuonXuong;
     }
 };
+
+
+// _______________Tăng giảm số lượng đơn hàng_______________________
+
+
+var tongtien;
+const payMoney = document.querySelectorAll('#pay-money');
+for (let i = 0; i < payMoney.length; i++) {
+    payMoney[i].innerHTML = `190.000đ`;
+}
+
+$(document).ready(function() {
+
+    $("#number").keyup(function() {
+
+        var value = $(this).val();
+        value = isNaN(value) ? 0 : value;
+        tongtien = 190000 * value;
+        tongtien = tongtien.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+
+        for (let i = 0; i < payMoney.length; i++) {
+            payMoney[i].innerHTML = `${tongtien}đ`;
+        }
+        document.getElementById('modal-const').innerHTML = `x ${value}kg`;
+        document.getElementById('moneyPaySuscess').innerHTML = `Số tiền đã đặt là <span class="fw-bold text-danger">${tongtien}đ.</span>`;
+
+    });
+});
+
+var value = parseInt($("#number").val());
+
+
+function TangValue() {
+
+
+    value = isNaN(value) ? 0 : value;
+    value++;
+    document.getElementById('number').value = value;
+    tongtien = 190000 * value;
+    tongtien = tongtien.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+
+    for (let i = 0; i < payMoney.length; i++) {
+        payMoney[i].innerHTML = `${tongtien}đ`;
+    }
+
+    document.getElementById('modal-const').innerHTML = `x ${value}kg`;
+    document.getElementById('moneyPaySuscess').innerHTML = `Số tiền đã đặt là <span class="fw-bold text-danger">${tongtien}đ.</span>`;
+
+}
+
+function GiamValue() {
+
+
+    value = isNaN(value) ? 1 : value;
+    if (value > 1) {
+        value--;
+    }
+    document.getElementById('number').value = value;
+    tongtien = 190000 * value;
+    tongtien = tongtien.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+    for (let i = 0; i < payMoney.length; i++) {
+        payMoney[i].innerHTML = `${tongtien}đ`;
+    }
+
+    document.getElementById('modal-const').innerHTML = `x ${value}kg`;
+    document.getElementById('moneyPaySuscess').innerHTML = `Số tiền đã đặt là <span class="fw-bold text-danger">${tongtien}đ.</span>`;
+
+}
+
+
+// ______________________________________
+
+$(document).ready(function() {
+    $(".close-product").click(function() {
+        $(".product-item").remove();
+        for (let i = 0; i < payMoney.length; i++) {
+            payMoney[i].innerHTML = `0đ`;
+        }
+    });
+});
+// ____________________________________

@@ -453,15 +453,15 @@
                             <span>Sản phẩm đã được thêm vào giỏ!</span>
                         </div>
 
-                        <div class="d-flex justify-content-between align-items-center">
+                        <div class="product-item d-flex justify-content-between align-items-center">
                             <div class="w-25">
                                 <img src="../img/nho-xanh.jpg" alt="" class="img-fluid img-thumbnail">
                             </div>
                             <span class="ps-2">Nho xanh Úc</span>
-                            <span>Số lượng <strong>x 1Kg</strong> </span>
+                            <span>Số lượng <strong id="modal-const">x 1kg</strong> </span>
                             <div>
                             </div>
-                            <button type="button" class="btn btn-danger">Xóa</button>
+                            <button type="button" class="close-product btn btn-danger">Xóa</button>
                         </div>
                     </div>
                     <div class="modal-footer justify-content-center">
@@ -698,11 +698,12 @@
                                       </select>
                                 </div>
                                 <div class=" col-md-6 col-6">
-                                    <div class="btn-group pay-btn-group  w-75" role="group">
-                                        <button type="button" class="btn btn-outline-secondary">-</button>
-                                        <button type="button" class="btn btn-outline-secondary"> 1kg </button>
-                                        <button type="button" class="btn btn-outline-secondary">+</button>
-                                    </div>
+                                    <form class=" const-detail">
+                                        <input type="button" onclick="GiamValue()" value="-" />
+
+                                        <input class="text-center" type="text" id="number" value="1" />
+                                        <input type="button" onclick="TangValue()" value="+" />
+                                    </form>
                                 </div>
                             </div>
 
@@ -814,7 +815,7 @@
 
                                     <div class="col-md-6">
                                         <label for="inputEmail4" class="form-label">Họ và tên</label>
-                                        <input type="email" class="form-control" placeholder="Họ và tên" required>
+                                        <input type="text" class="form-control" placeholder="Họ và tên" required>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="inputPassword4" class="form-label">Số điện thoại</label>
