@@ -131,6 +131,8 @@ for (let i = 0; i < payMoney.length; i++) {
     payMoney[i].innerHTML = `190.000đ`;
 }
 
+// _________nhập số lượng từ input____________
+
 $(document).ready(function() {
 
     $("#number").keyup(function() {
@@ -150,7 +152,7 @@ $(document).ready(function() {
     });
 });
 
-// _______________________________
+// _____________( + )__________________
 
 var value = parseInt($("#number").val());
 $('#moneyPaySuscess').html(`Số tiền đã đặt là <span class="fw-bold text-danger">190.000đ.</span>`);
@@ -173,6 +175,7 @@ function TangValue() {
     $('#moneyPaySuscess').html(`Số tiền đã đặt là <span class="fw-bold text-danger">${tongtien}đ.</span>`);
 
 }
+// ____________( - ) _________________
 
 function GiamValue() {
 
@@ -195,7 +198,7 @@ function GiamValue() {
 }
 
 
-// ____________________________________
+// _______________nhập tên khách_____________________
 
 
 $(document).ready(function() {
