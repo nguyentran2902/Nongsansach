@@ -438,7 +438,7 @@
 
 
 
-        <!-- ____________________moddal Card has-product -->
+        <!-- ____________________modal Card has-product -->
 
         <div class="modal fade" id="modalCardHasProduct" tabindex="-1" aria-labelledby="modalCardHasProduct" aria-hidden="true">
             <div class="modal-dialog">
@@ -450,10 +450,10 @@
                     <div class="modal-body text-white my-1 ">
 
                         <div class="text-start mb-3">
-                            <span>Sản phẩm đang có trong giỏ!</span>
+                            <span class="modal-inforProduct">Sản phẩm đang có trong giỏ!</span>
                         </div>
 
-                        <div class="product-item d-flex justify-content-between align-items-center">
+                        <div class="product-item show d-flex justify-content-between align-items-center">
                             <div class="w-25">
                                 <img src="../img/nho-xanh.jpg" alt="" class="img-fluid img-thumbnail">
                             </div>
@@ -470,7 +470,7 @@
 
                             <div class="form-group mx-2">
                                 <a href="thanh-toan-ngay.html">
-                                    <button type="submit" class="pay-modal-btn btn-login form-control btn text-white fw-bold px-4"><h5>Đặt hàng</h5></button>
+                                    <button type="submit" class="pay-modal-btn show btn-login form-control btn text-white fw-bold px-4"><h5>Đặt hàng</h5></button>
 
                                 </a>
                             </div>
@@ -630,7 +630,7 @@
 
                             <tbody>
 
-                                <tr class="product-item ">
+                                <tr class="product-item-table">
                                     <th scope="row">1</th>
                                     <td>Nho xanh Úc</td>
                                     <td>190.000đ</td>
@@ -643,15 +643,15 @@
                                             <input type="button" onclick="TangValue()" value="+" />
                                         </form>
                                     </td>
-                                    <td id="pay-money"></td>
+                                    <td class="pay-money"></td>
                                     <td>
                                         <button type="button" class="close-product btn btn-danger">Xóa</button>
                                     </td>
                                 </tr>
 
-                                <tr class="product-item ">
+                                <tr class="product-item-table ">
                                     <td colspan="5" class="text-end fw-bold">Thành tiền:</td>
-                                    <td class="fw-bold" id="pay-money">
+                                    <td class="fw-bold pay-money">
 
                                     </td>
 
@@ -666,7 +666,7 @@
                                 </tr>
                                 <tr>
                                     <td colspan="5" class="text-end fw-bold text-danger">Tổng tiền:</td>
-                                    <td class="fw-bold text-danger" id="pay-money"></td>
+                                    <td class="fw-bold text-danger pay-money"></td>
 
                                 </tr>
 
@@ -1188,15 +1188,17 @@
                         </div>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">Vui lòng để lại thông tin của bạn để nhận ưu đãi hấp dẫn từ Nông Sản Sạch!</li>
-                            <li class="list-group-item">
-                                <input type="text" placeholder="Họ và tên">
-                            </li>
-                            <li class="list-group-item">
-                                <input type="text" placeholder="Số điện thoại">
-                            </li>
-                            <li class="list-group-item d-flex justify-content-center">
-                                <button type="submit" class="btn fw-bold">TƯ VẤN ĐẶT HÀNG</button>
-                            </li>
+                            <form action="">
+                                <li class="list-group-item">
+                                    <input type="text" placeholder="Họ và tên" required>
+                                </li>
+                                <li class="list-group-item">
+                                    <input type="text" placeholder="Số điện thoại" required>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-center">
+                                    <button type="submit" class="btn fw-bold" required>TƯ VẤN ĐẶT HÀNG</button>
+                                </li>
+                            </form>
 
 
                         </ul>
@@ -1208,6 +1210,7 @@
             </div>
         </div>
     </footer>
+
 
     <!-- ______________#linefooter___________________ -->
 

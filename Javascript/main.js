@@ -1,6 +1,5 @@
 // _____________________mobile-nav-toggle_______________
 
-
 $(document).ready(function() {
     $(".mobile-menu-items-1").click(function() {
 
@@ -32,7 +31,8 @@ $(document).ready(function() {
     $(".mess-btn").click(function() {
 
         $(".close-btn").css("display", "block");
-        $("#noti").css("display", "block");
+        $("#noti").css("opacity", "1");
+        $("#noti").css("transform", "scale(1)");
         $(".mess-btn").css("display", "none");
 
     });
@@ -46,7 +46,8 @@ $(document).ready(function() {
     $(".close-btn").click(function() {
 
         $(".close-btn").css("display", "none");
-        $("#noti").css("display", "none");
+        $("#noti").css("opacity", "0");
+        $("#noti").css("transform", "scale(0)");
         $(".mess-btn").css("display", "block");
 
     });
@@ -60,7 +61,8 @@ $(document).ready(function() {
     $("#mobileMessClose").click(function() {
 
         $(".close-btn").css("display", "none");
-        $("#noti").css("display", "none");
+        $("#noti").css("opacity", "0");
+        $("#noti").css("transform", "scale(0)");
         $(".mess-btn").css("display", "block");
 
     });
@@ -124,7 +126,7 @@ window.onscroll = function() {
 
 
 var tongtien;
-const payMoney = document.querySelectorAll('#pay-money');
+const payMoney = $('.pay-money');
 for (let i = 0; i < payMoney.length; i++) {
     payMoney[i].innerHTML = `190.000đ`;
 }
@@ -141,13 +143,17 @@ $(document).ready(function() {
         for (let i = 0; i < payMoney.length; i++) {
             payMoney[i].innerHTML = `${tongtien}đ`;
         }
-        document.getElementById('modal-const').innerHTML = `x ${value}kg`;
-        document.getElementById('moneyPaySuscess').innerHTML = `Số tiền đã đặt là <span class="fw-bold text-danger">${tongtien}đ.</span>`;
+        $('#modal-const').html(`x ${value}kg`);
+
+        $('#moneyPaySuscess').html(`Số tiền đã đặt là <span class="fw-bold text-danger">${tongtien}đ.</span>`);
 
     });
 });
 
+// _______________________________
+
 var value = parseInt($("#number").val());
+$('#moneyPaySuscess').html(`Số tiền đã đặt là <span class="fw-bold text-danger">190.000đ.</span>`);
 
 
 function TangValue() {
@@ -155,7 +161,7 @@ function TangValue() {
 
     value = isNaN(value) ? 0 : value;
     value++;
-    document.getElementById('number').value = value;
+    $('#number').val(value)
     tongtien = 190000 * value;
     tongtien = tongtien.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
 
@@ -163,8 +169,8 @@ function TangValue() {
         payMoney[i].innerHTML = `${tongtien}đ`;
     }
 
-    document.getElementById('modal-const').innerHTML = `x ${value}kg`;
-    document.getElementById('moneyPaySuscess').innerHTML = `Số tiền đã đặt là <span class="fw-bold text-danger">${tongtien}đ.</span>`;
+    $('#modal-const').html(`x ${value}kg`);
+    $('#moneyPaySuscess').html(`Số tiền đã đặt là <span class="fw-bold text-danger">${tongtien}đ.</span>`);
 
 }
 
@@ -174,28 +180,64 @@ function GiamValue() {
     value = isNaN(value) ? 1 : value;
     if (value > 1) {
         value--;
-    }
-    document.getElementById('number').value = value;
-    tongtien = 190000 * value;
-    tongtien = tongtien.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
-    for (let i = 0; i < payMoney.length; i++) {
-        payMoney[i].innerHTML = `${tongtien}đ`;
-    }
 
-    document.getElementById('modal-const').innerHTML = `x ${value}kg`;
-    document.getElementById('moneyPaySuscess').innerHTML = `Số tiền đã đặt là <span class="fw-bold text-danger">${tongtien}đ.</span>`;
+        $('#number').val(value)
 
+        tongtien = 190000 * value;
+        tongtien = tongtien.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+        for (let i = 0; i < payMoney.length; i++) {
+            payMoney[i].innerHTML = `${tongtien}đ`;
+        }
+
+        $('#modal-const').html(`x ${value}kg`);
+        $('#moneyPaySuscess').html(`Số tiền đã đặt là <span class="fw-bold text-danger">${tongtien}đ.</span>`);
+    }
 }
 
 
-// ______________________________________
+// ____________________________________
+
+
+$(document).ready(function() {
+
+    $("#name-customer").keyup(function() {
+
+        var value = $(this).val();
+
+
+        $('#nameSuscess').html(`  ${value}  `);
+
+    });
+});
+// _______________Xóa-đơn-hàng_______________________
 
 $(document).ready(function() {
     $(".close-product").click(function() {
-        $(".product-item").remove();
+        $(".product-item-table").remove('');
+        $(".product-item").removeClass('show');
+        $(".pay-modal-btn").removeClass('show');
+        $(".modal-inforProduct").html(`Giỏ hàng trống, bạn cần thêm sản phẩm`)
+        $(".basket-count").html(`0`)
+        $('#moneyPaySuscess').html(``);
+
+
         for (let i = 0; i < payMoney.length; i++) {
             payMoney[i].innerHTML = `0đ`;
         }
     });
 });
-// ____________________________________
+
+
+// _______________Thêm đơn hàng__________________
+
+$(document).ready(function() {
+    $(".detail-btn-2").click(function() {
+        $(".product-item").addClass('show');
+        $(".pay-modal-btn").addClass('show');
+        $(".modal-inforProduct").html(`Sản phẩm đã được thêm vào giỏ`)
+
+        $(".basket-count").html(`1`)
+
+
+    });
+});

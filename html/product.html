@@ -57,7 +57,7 @@
 
                         <div class="navbar-basket ms-2" data-bs-toggle="modal" data-bs-target="#modalCardHasProduct">
                             <i class="fas fa-cart-arrow-down"></i>
-                            <div class="basket-count">1</div>
+                            <div class="basket-count">0</div>
                         </div>
 
                     </div>
@@ -438,7 +438,7 @@
 
 
 
-        <!-- ____________________moddal Card has-product -->
+        <!-- ____________________modal Card has-product -->
 
         <div class="modal fade" id="modalCardHasProduct" tabindex="-1" aria-labelledby="modalCardHasProduct" aria-hidden="true">
             <div class="modal-dialog">
@@ -450,7 +450,7 @@
                     <div class="modal-body text-white my-1 ">
 
                         <div class="text-start mb-3">
-                            <span>Sản phẩm đã được thêm vào giỏ!</span>
+                            <span class="modal-inforProduct">Giỏ hàng trống, bạn cần thêm sản phẩm</span>
                         </div>
 
                         <div class="product-item d-flex justify-content-between align-items-center">
@@ -1291,15 +1291,17 @@
                         </div>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">Vui lòng để lại thông tin của bạn để nhận ưu đãi hấp dẫn từ Nông Sản Sạch!</li>
-                            <li class="list-group-item">
-                                <input type="text" placeholder="Họ và tên">
-                            </li>
-                            <li class="list-group-item">
-                                <input type="text" placeholder="Số điện thoại">
-                            </li>
-                            <li class="list-group-item d-flex justify-content-center">
-                                <button type="submit" class="btn fw-bold">TƯ VẤN ĐẶT HÀNG</button>
-                            </li>
+                            <form action="">
+                                <li class="list-group-item">
+                                    <input type="text" placeholder="Họ và tên" required>
+                                </li>
+                                <li class="list-group-item">
+                                    <input type="text" placeholder="Số điện thoại" required>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-center">
+                                    <button type="submit" class="btn fw-bold" required>TƯ VẤN ĐẶT HÀNG</button>
+                                </li>
+                            </form>
 
 
                         </ul>

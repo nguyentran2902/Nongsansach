@@ -7,6 +7,7 @@ const detailLine = document.querySelector(".detail-line");
 detailLine.style.left = document.querySelector('.detail-content-item.active').offsetLeft + 12 + 'px';
 detailLine.style.width = document.querySelector('.detail-content-item.active').offsetWidth + 'px';
 
+
 detailItems.forEach(function(detailItem, index) {
     var detailText = detailTexts[index]
     detailItem.onclick = function() {
